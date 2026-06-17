@@ -83,7 +83,7 @@ type Docker struct {
 type DockerResult struct {
 	Error       error
 	Action      string
-	ContainerId string
+	ContainerID string
 	Result      string
 }
 
@@ -156,7 +156,7 @@ func (d *Docker) Run() DockerResult {
 	}
 
 	stdcopy.StdCopy(os.Stdout, os.Stderr, out)
-	return DockerResult{ContainerId: resp.ID, Action: "start", Result: "success"}
+	return DockerResult{ContainerID: resp.ID, Action: "start", Result: "success"}
 }
 
 func (d *Docker) Stop(id string) DockerResult {
