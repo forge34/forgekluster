@@ -15,15 +15,6 @@ import (
 	"github.com/moby/moby/client"
 )
 
-type State int
-
-const (
-	Pending State = iota
-	Scheduled
-	Running
-	Completed
-	Failed
-)
 
 type Task struct {
 	ID            uuid.UUID
